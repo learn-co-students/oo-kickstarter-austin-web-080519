@@ -1,4 +1,4 @@
-require "project"
+require_relative "project"
 class Backer 
    attr_reader :name, :backed_projects
 
@@ -11,7 +11,7 @@ class Backer
         end 
         def back_project(project)
             @backed_projects << project 
-            project.add_backer(self) 
+            project.add_backer(self) if !project.backers.include?(self)
         end 
         
 end 

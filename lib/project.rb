@@ -1,4 +1,4 @@
-require "backer"
+require_relative "backer"
 class Project 
 attr_reader :title, :backers
 
